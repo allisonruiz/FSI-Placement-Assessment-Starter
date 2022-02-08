@@ -4,6 +4,7 @@ let yourName = "Allison Ruiz"
 let gb = 0 // Gingerbread
 let cc = 0 // Chocolate Chip
 let sugar = 0 // Sugar Sprinkle
+let total = 0
 
 // selecting the element with an id of credit
 const credit = document.querySelector('#credit')
@@ -14,6 +15,7 @@ const ccPlusBtn = document.querySelector('#add-cc');
 const ccMinusBtn = document.querySelector('#minus-cc');
 const sugarPlusBtn = document.querySelector('#add-sugar');
 const sugarMinusBtn =document.querySelector('#minus-sugar');
+const totalQuantity = document.querySelector('th');
 
 // Code to update name display
 document.getElementById('credit').textContent = (`Created by ${yourName}`);
@@ -57,4 +59,44 @@ sugarPlusBtn.addEventListener("click", function(e) {
     let sugarQuantity = document.querySelector("#qty-sugar");
     sugarQuantity.textContent = sugar
 });
-// TODO: Hook up event listeners for the rest of the buttons
+
+gbMinusBtn.addEventListener("click", function (e) {
+    if (total > 0) {
+    total--;
+    let totalQuantity = document.querySelector("#qty-total");
+    totalQuantity.textContent = total
+    }
+} );
+gbPlusBtn.addEventListener("click", function(e) {
+    total++;
+    let totalQuantity = document.querySelector("#qty-total");
+    totalQuantity.textContent = total
+});
+
+
+ccMinusBtn.addEventListener("click", function (e) {
+    if (total > 0) {
+    total--;
+    let totalQuantity = document.querySelector("#qty-total");
+    totalQuantity.textContent = total
+    }
+} );
+ccPlusBtn.addEventListener("click", function(e) {
+    total++;
+    let totalQuantity = document.querySelector("#qty-total");
+    totalQuantity.textContent = total
+});
+
+
+sugarMinusBtn.addEventListener("click", function (e) {
+    if (total > 0) {
+    total--;
+    let totalQuantity = document.querySelector("#qty-total");
+    totalQuantity.textContent = total
+    }
+} );
+sugarPlusBtn.addEventListener("click", function(e) {
+    total++;
+    let totalQuantity = document.querySelector("#qty-total");
+    totalQuantity.textContent = total
+});

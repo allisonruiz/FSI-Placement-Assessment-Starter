@@ -25,6 +25,9 @@ gbPlusBtn.addEventListener("click", function(e) {
         gb++;
         let gbQuantity = document.querySelector("#qty-gb");
         gbQuantity.textContent = gb
+        total++;
+        let totalQuantity = document.querySelector("#qty-total");
+        totalQuantity.textContent = total
 });
 
 gbMinusBtn.addEventListener("click", function (e) {
@@ -32,6 +35,9 @@ if (gb > 0) {
 gb--;
 let gbQuantity = document.querySelector("#qty-gb");
 gbQuantity.textContent = gb
+total--;
+let totalQuantity = document.querySelector("#qty-total");
+totalQuantity.textContent = total
 }
 } );
 ccMinusBtn.addEventListener("click", function (e) {
@@ -39,12 +45,18 @@ ccMinusBtn.addEventListener("click", function (e) {
     cc--;
     let ccQuantity = document.querySelector("#qty-cc");
     ccQuantity.textContent = cc
+    total--;
+    let totalQuantity = document.querySelector("#qty-total");
+    totalQuantity.textContent = total
     }
 } );
 ccPlusBtn.addEventListener("click", function(e) {
     cc++;
     let ccQuantity = document.querySelector("#qty-cc");
     ccQuantity.textContent = cc
+    total++;
+    let totalQuantity = document.querySelector("#qty-total");
+    totalQuantity.textContent = total
 });
 
 sugarMinusBtn.addEventListener("click", function (e) {
@@ -52,50 +64,15 @@ sugarMinusBtn.addEventListener("click", function (e) {
     sugar--;
     let sugarQuantity = document.querySelector("#qty-sugar");
     sugarQuantity.textContent = sugar
+    total--;
+    let totalQuantity = document.querySelector("#qty-total");
+    totalQuantity.textContent = total
     }
 } );
 sugarPlusBtn.addEventListener("click", function(e) {
     sugar++;
     let sugarQuantity = document.querySelector("#qty-sugar");
     sugarQuantity.textContent = sugar
-});
-
-gbMinusBtn.addEventListener("click", function (e) {
-    if (total > 0) {
-    total--;
-    let totalQuantity = document.querySelector("#qty-total");
-    totalQuantity.textContent = total
-    }
-} );
-gbPlusBtn.addEventListener("click", function(e) {
-    total++;
-    let totalQuantity = document.querySelector("#qty-total");
-    totalQuantity.textContent = total
-});
-
-
-ccMinusBtn.addEventListener("click", function (e) {
-    if (total > 0) {
-    total--;
-    let totalQuantity = document.querySelector("#qty-total");
-    totalQuantity.textContent = total
-    }
-} );
-ccPlusBtn.addEventListener("click", function(e) {
-    total++;
-    let totalQuantity = document.querySelector("#qty-total");
-    totalQuantity.textContent = total
-});
-
-
-sugarMinusBtn.addEventListener("click", function (e) {
-    if (total > 0) {
-    total--;
-    let totalQuantity = document.querySelector("#qty-total");
-    totalQuantity.textContent = total
-    }
-} );
-sugarPlusBtn.addEventListener("click", function(e) {
     total++;
     let totalQuantity = document.querySelector("#qty-total");
     totalQuantity.textContent = total

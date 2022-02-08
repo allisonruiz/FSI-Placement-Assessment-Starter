@@ -16,14 +16,16 @@ const sugarPlusBtn = document.querySelector('#add-sugar');
 const sugarMinusBtn =document.querySelector('#minus-sugar');
 
 // Code to update name display
-document.getElementById('credit').textContent = `Created by ${allisonRuiz}`
+document.getElementById('credit').textContent = (`Created by ${allisonRuiz}`);
 
 // Event listener for clicks on the "+" button for Gingerbread cookies
-gbPlusBtn.addEventListener('click', function(e) {
+gbPlusBtn.addEventListener("click", function(e) {
     if (quantity > 0) {
-        quantity--;
-        orderSummary = quantity
+        quantity++;
+        orderSummary++;
+        udateQuantity(`Quantity: ${quantity}`);
     }
+
 // HINT: You can delete this console.log after you no longer need it!
 console.log('Gingerbread + button was clicked!')
 

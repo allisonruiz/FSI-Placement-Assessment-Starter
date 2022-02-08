@@ -16,20 +16,20 @@ const sugarPlusBtn = document.querySelector('#add-sugar');
 const sugarMinusBtn =document.querySelector('#minus-sugar');
 
 // Code to update name display
-document.getElementById('credit').textContent = (`Created by ${allisonRuiz}`);
+document.getElementById('credit').textContent = (`Created by ${yourName}`);
 
 // Event listener for clicks on the "+" button for Gingerbread cookies
 gbPlusBtn.addEventListener("click", function(e) {
+        gb++;
+        let gbQuantity = document.querySelector("#qty-gb");
+        gbQuantity.textContent = gb
+});
+gbMinusBtn.addEventListener("click", function (e) {
     if (quantity > 0) {
-        quantity++;
-        orderSummary++;
-        udateQuantity(`Quantity: ${quantity}`);
+    gb--;
+    let gbQuantity = document.querySelector("#qty-gb");
+    gbQuantity.textContent = gb
     }
-
-// HINT: You can delete this console.log after you no longer need it!
-console.log('Gingerbread + button was clicked!')
-
-// TODO: Write the code to be run when the "+" button for "Gingerbread" is clicked
-})
+} );
 
 // TODO: Hook up event listeners for the rest of the buttons

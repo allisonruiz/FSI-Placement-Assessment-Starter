@@ -24,12 +24,37 @@ gbPlusBtn.addEventListener("click", function(e) {
         let gbQuantity = document.querySelector("#qty-gb");
         gbQuantity.textContent = gb
 });
+
 gbMinusBtn.addEventListener("click", function (e) {
-    if (quantity > 0) {
-    gb--;
-    let gbQuantity = document.querySelector("#qty-gb");
-    gbQuantity.textContent = gb
+if (gb > 0) {
+gb--;
+let gbQuantity = document.querySelector("#qty-gb");
+gbQuantity.textContent = gb
+}
+} );
+ccMinusBtn.addEventListener("click", function (e) {
+    if (cc > 0) {
+    cc--;
+    let ccQuantity = document.querySelector("#qty-cc");
+    ccQuantity.textContent = cc
     }
 } );
+ccPlusBtn.addEventListener("click", function(e) {
+    cc++;
+    let ccQuantity = document.querySelector("#qty-cc");
+    ccQuantity.textContent = cc
+});
 
+sugarMinusBtn.addEventListener("click", function (e) {
+    if (sugar > 0) {
+    sugar--;
+    let sugarQuantity = document.querySelector("#qty-sugar");
+    sugarQuantity.textContent = sugar
+    }
+} );
+sugarPlusBtn.addEventListener("click", function(e) {
+    sugar++;
+    let sugarQuantity = document.querySelector("#qty-sugar");
+    sugarQuantity.textContent = sugar
+});
 // TODO: Hook up event listeners for the rest of the buttons
